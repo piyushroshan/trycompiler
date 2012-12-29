@@ -5,7 +5,6 @@
 %token NAME NUMBER
 %%
 statement:	NAME '=' expression	{ printf("pretending to assign %s the value %d\n", $1, $3); }
-	;
 	|	expression		{ printf("= %d\n", $1); }
 	;
 expression:	expression '+' NUMBER	{ $$ = $1 + $3;

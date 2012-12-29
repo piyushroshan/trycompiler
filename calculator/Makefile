@@ -4,7 +4,7 @@ LDLIBS = -ll
 CC = gcc
 YACC = yacc
 
-
+all: ch301 ch302 words2
 
 ch301:	ch301.tab.o ch301.yy.o
 	$(CC) -o ch301 ch301.tab.o ch301.yy.o $(LDLIBS)
